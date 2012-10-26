@@ -43,7 +43,7 @@
   a single-threaded environment, meaning multiple scripts cannot run at the same time. As an example, imagine
   a site that needs to handle UI events, query and process large amounts of API data,
   and manipulate the DOM. Pretty common, right? Unfortunately all of that can't be simultaneous
-  due to limitations in browsers' JavaScript runtime. Script execution happens within a single thread.</p>
+  due to limitations in browsers' JavaScript runtimes. Script execution happens within a single thread.</p>
 
   <p>Developers mimic 'concurrency' by using techniques like
   <code>setTimeout()</code>, <code>setInterval()</code>, <code>XMLHttpRequest</code>, and event handlers.
@@ -56,7 +56,7 @@
   <p>The <a href="http://www.whatwg.org/specs/web-workers/current-work/">Web Workers</a> specification defines
   an API for spawning background scripts in your web application. Web Workers allow you to do things like
   fire up long-running scripts to handle computationally intensive tasks, but without blocking the UI or other
-  scripts to handle user interactions. They're going to help put and end to that nasty 'unresponsive script' dialog
+  scripts to handle user interactions. They're going to help put an end to that nasty 'unresponsive script' dialog
   that we've all come to love:</p>
 
   <figure class="center">
@@ -64,8 +64,8 @@
     <figcaption>Common unresponsive script dialog.</figcaption>
   </figure>
 
-  <p>Workers utilize thread-like message passing to achieve parallelism. They're perfect for keeping your
-  UI refresh, performant, and responsive for users.</p>
+  <p>Workers utilize process-like message passing to achieve parallelism. They're perfect for keeping your
+  UI fresh, performant, and responsive for users.</p>
 
   <h3 id="toc-introduction-types">Types of Web Workers</h3>
 
@@ -99,7 +99,7 @@ worker.postMessage(); // Start the worker.
   method. Depending on your browser/version, <code>postMessage()</code> can accept either a string or JSON object as its single argument.
   The latest versions of the modern browsers support passing a JSON object.</p>
 
-  <p>Below is a example of using a string to pass 'Hello World' to a worker in doWork.js. The worker simply returns
+  <p>Below is an example of using a string to pass 'Hello World' to a worker in doWork.js. The worker simply returns
   the message that is passed to it.</p>
 
   <p>Main script:</p>
